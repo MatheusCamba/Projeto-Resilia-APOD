@@ -2,8 +2,8 @@
 
 body{
     font-family: 'Titillium Web', sans-serif;
-    background-image: url(./img/ken-cheung-KLC3q7Z0RDE-unsplash.jpg)
-    
+    background-image: url(./img/ken-cheung-KLC3q7Z0RDE-unsplash.jpg);
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -77,11 +77,18 @@ h1 {
 }
 
 #pic{
+   display: flex;
    border-radius: 18px; 
    object-fit: contain;
+   margin-bottom: 84px;
 }
 
-#copyright{
-    padding: 45px 0px;
-    font-size: 20px;
+#video{
+    display: flex;
+    width: 906px;
+    height: 479px;
+    margin-top: 84px;
+        
 }
+
+

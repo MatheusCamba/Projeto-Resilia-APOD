@@ -8,11 +8,21 @@ window.addEventListener('load', function () {
             console.log(data)
             let explanation = data.explanation
             let title = data.title
-            let copyright = data.copyright
-            $('#title').text(`${title}`)
-            $('#texto').text(`${explanation}`)
-            $('#pic').attr('src', data.url)
-            $('#copyright').text(`${copyright}`)
+
+                if(data.media_type == "image"){
+                    $('#video').hide();
+                    $('#title').text(`${title}`);
+                    $('#texto').text(`${explanation}`);
+                    $('#pic').attr('src', data.url);
+                    
+                } else{
+                    $('#pic').hide();
+                    $('#video').show();
+                    $('#title').text(`${title}`);
+                    $('#texto').text(`${explanation}`);
+                    $('#video').attr('src', data.url);
+                    
+                }
         }
     })
 })
@@ -32,11 +42,23 @@ function disparar(){
                 //if verifcar o media+type else
                 let explanation = data.explanation
                 let title = data.title
-                let copyright = data.copyright
-                $('#title').text(`${title}`)
-                $('#texto').text(`${explanation}`)
-                $('#pic').attr('src', data.url)
-                $('#copyright').text(`${copyright}`)
+
+                if(data.media_type == "image"){
+                    $('#video').hide();
+                    $('#title').text(`${title}`);
+                    $('#texto').text(`${explanation}`);
+                    $('#pic').attr('src', data.url);
+                    
+                } else{
+                    $('#pic').hide();
+                    $('#video').show();
+                    $('#title').text(`${title}`);
+                    $('#texto').text(`${explanation}`);
+                    $('#video').attr('src', data.url);
+                    
+                }
+
+                
                 
             }
         })
