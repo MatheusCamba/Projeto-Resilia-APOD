@@ -1,3 +1,24 @@
+window.addEventListener('load', function () {
+    const key = 'cAI9TqySqT6tRU5RqKYaTkfiHaTKYZvzpfSH7X0A'
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${key}`
+    $.ajax({
+        url: url,
+        type: "GET",
+        success: function (data) {
+            console.log(data)
+            let explanation = data.explanation
+            let title = data.title
+            let copyright = data.copyright
+            $('#title').text(`${title}`)
+            $('#texto').text(`${explanation}`)
+            $('#pic').attr('src', data.url)
+            $('#copyright').text(`${copyright}`)
+        }
+    })
+})
+
+
+
 function disparar(){
     $('#btnSubmit').click(function(){
         let key = 'cAI9TqySqT6tRU5RqKYaTkfiHaTKYZvzpfSH7X0A'
