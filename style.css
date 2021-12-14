@@ -11,6 +11,20 @@ body{
     justify-content: space-between;
 }
 
+@media (max-width: 375px) {
+    .container{
+        display: flex;
+        justify-content: space-around
+    }
+}
+
+@media (max-height: 812px) {
+    .container{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
 h1 {
     font-size: 50px;
     padding: 68px 0px;
@@ -22,6 +36,14 @@ h1 {
     justify-content: center;
     align-items: center;
     padding-right: 100px;
+}
+
+@media (max-width: 375px) {
+    .container2 {
+        display: flex;
+        justify-content: end;
+        
+    }
 }
 
 #data {
@@ -42,10 +64,11 @@ h1 {
     font-size: 15px;
 }
 
-#btnSubmit :hover {
+#btnSubmit:hover{
     cursor: pointer;
     width: 78px;
     height: 33px;
+    transition: 0.5s;
 }
 
 .container3 {
@@ -89,6 +112,14 @@ h1 {
     height: 479px;
     margin-top: 84px;
         
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    
 }
 
 
